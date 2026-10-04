@@ -10,6 +10,34 @@ The project focuses on understanding how a real-world backend is structured — 
 
 ## ✨ Features
 
+## 🔎 MongoDB Aggregation Pipelines
+
+ProjectCampy uses **MongoDB Aggregation Pipelines** to retrieve,
+join, filter, and transform data across multiple collections.
+
+The project uses aggregation stages such as:
+
+- `$match`
+- `$lookup`
+- `$unwind`
+- `$project`
+
+These pipelines are used to work with relationships between:
+
+````text
+User
+  │
+  ▼
+ProjectMember
+  │
+  ▼
+Project
+  │
+  ├── Tasks
+  │     └── Subtasks
+  │
+  └── Members
+
 ### 🔐 Authentication & Authorization
 
 - User registration and login
@@ -163,4 +191,4 @@ ProjectCampy/
 ├── .prettierrc
 ├── package.json
 └── package-lock.json
-```
+````
